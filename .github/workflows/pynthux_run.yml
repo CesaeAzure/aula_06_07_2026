@@ -51,6 +51,6 @@ jobs:
     - name: Ver ficheiros
       run: |
          mkdir "${{ inputs.name_pasta }}"
-         touch "${{ inputs.name_ficheiro }}"
-         echo 'print("${{ inputs.mensagem }}")' > mensagem.py
-         python mensagem.py
+         cd "${{ inputs.name_pasta }}"
+         echo 'print("${{ inputs.mensagem }}")' > ${{ inputs.name_ficheiro }}
+         python ${{ inputs.name_ficheiro }}
