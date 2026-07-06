@@ -52,5 +52,5 @@ jobs:
       run: |
          mkdir "${{ inputs.name_pasta }}"
          touch "${{ inputs.name_ficheiro }}"
-         echo "${{inputs.mensagem}}" > mensagem.py
+         echo 'print("${{ inputs.mensagem }}")' > mensagem.py
          python mensagem.py
